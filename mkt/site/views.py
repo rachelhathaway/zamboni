@@ -119,6 +119,15 @@ def robots(request):
     return HttpResponse(template, content_type='text/plain')
 
 
+def contribute(request):
+    """Serve contribute.json"""
+    file = './contribute.json'
+    with open(file) as handle:
+        data = json.load(handle)
+    content = json.dumps(data)
+    return HttpResponse(content, content_type='application/json')
+
+
 @csrf_exempt
 @require_POST
 def record(request):

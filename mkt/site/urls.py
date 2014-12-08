@@ -16,6 +16,7 @@ services_patterns = patterns('',
 
 urlpatterns = patterns('',
     url('^robots.txt$', views.robots, name='robots.txt'),
+    url('^contribute.json', views.contribute, name='contribute'),
 
     # Replace opensearch.xml from amo with a specific one for Marketplace.
     url('^opensearch.xml$', views.OpensearchView.as_view(), name='opensearch'),

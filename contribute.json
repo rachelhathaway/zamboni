@@ -1,0 +1,38 @@
+{
+    "name": "Marketplace",
+    "description": "The Firefox Marketplace is the official source of apps for the Web Platform.",
+    "repository": {
+        "url": "https://github.com/mozilla/marketplace-env",
+        "license": "MPL2",
+        "type": "git",
+        "tests": "https://ci.mozilla.org/job/marketplace/",
+        "clone": "https://github.com/mozilla/marketplace-env.git"
+    },
+    "participate": {
+        "home": "https://wiki.mozilla.org/Marketplace",
+        "docs": "http://marketplace.readthedocs.org",
+        "mailing-list": "https://lists.mozilla.org/listinfo/dev-marketplace",
+        "irc": "irc://irc.mozilla.org/#marketplace",
+        "irc-contacts": []
+    },
+    "bugs": {
+        "list": "https://bugzilla.mozilla.org/buglist.cgi?query_format=advanced&bug_status=UNCONFIRMED&bug_status=\\NEW&product=marketplace",
+        "report": "https://bugzilla.mozilla.org/enter_bug.cgi?product=marketplace&rep_platform=all&op_sys=all",
+        "mentored": "https://bugzilla.mozilla.org/buglist.cgi?f1=bug_mentor&o1=isnotempty&query_format=advanced&bug_status=NEW&product=marketplace"
+    },
+    "urls": {
+        "prod": "https://marketplace.firefox.com/",
+        "stage": "https://marketplace.allizom.org",
+        "dev": "https://marketplace-dev.allizom.org",
+        "alt dev": "https://marketplace-altdev.allizom.org/",
+        "landfill": "https://landfill-mkt.allizom.org/",
+        "payments alt": "http://payments-alt.allizom.org/"
+    },
+    "keywords": [
+        "python",
+        "less-css",
+        "django",
+        "html5",
+        "jquery"
+    ]
+}

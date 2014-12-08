@@ -136,6 +136,21 @@ class TestRobots(amo.tests.TestCase):
         self.assertContains(rs, 'Disallow: /')
 
 
+class TestContribute(amo.tests.TestCase):
+
+    def test_contribute(self):
+        response = self.client.get('/contribute.json')
+        strings = [
+            'Marketplace',
+            'https://github.com/mozilla/marketplace-env.git',
+            'https://wiki.mozilla.org/Marketplace',
+            'https://bugzilla.mozilla.org/enter_bug.cgi?product=marketplace&rep_platform=all&op_sys=all',
+            'https://marketplace.firefox.com/'
+        ]
+        self.assertEqual(response.status_code, 200)
+        self.assertTrue(all(string in response.content for string in strings))
+
+
 class TestOpensearch(amo.tests.TestCase):
 
     def test_opensearch_declaration(self):
