@@ -142,7 +142,7 @@ class TestContribute(amo.tests.TestCase):
         response = self.client.get('/contribute.json')
         strings = [
             'Marketplace',
-            'https://github.com/mozilla/marketplace-env.git',
+            'https://github.com/mozilla/marketplace-env',
             'https://wiki.mozilla.org/Marketplace',
             'https://bugzilla.mozilla.org/enter_bug.cgi?product=marketplace&rep_platform=all&op_sys=all',
             'https://marketplace.firefox.com/'

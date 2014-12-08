@@ -5,8 +5,7 @@
         "url": "https://github.com/mozilla/marketplace-env",
         "license": "MPL2",
         "type": "git",
-        "tests": "https://ci.mozilla.org/job/marketplace/",
-        "clone": "https://github.com/mozilla/marketplace-env.git"
+        "tests": "https://ci.mozilla.org/job/marketplace/"
     },
     "participate": {
         "home": "https://wiki.mozilla.org/Marketplace",
@@ -25,12 +24,11 @@
         "stage": "https://marketplace.allizom.org",
         "dev": "https://marketplace-dev.allizom.org",
         "alt dev": "https://marketplace-altdev.allizom.org/",
-        "landfill": "https://landfill-mkt.allizom.org/",
         "payments alt": "http://payments-alt.allizom.org/"
     },
     "keywords": [
         "python",
-        "less-css",
+        "stylus",
         "django",
         "html5",
         "jquery"
