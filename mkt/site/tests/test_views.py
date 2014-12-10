@@ -7,7 +7,7 @@ from django.test.utils import override_settings
 
 import mock
 from lxml import etree
-from nose.tools import eq_
+from nose.tools import eq_, ok_
 from pyquery import PyQuery as pq
 
 import amo
@@ -134,21 +134,6 @@ class TestRobots(amo.tests.TestCase):
     def test_do_not_engage_robots(self):
         rs = self.client.get('/robots.txt')
         self.assertContains(rs, 'Disallow: /')
-
-
-class TestContribute(amo.tests.TestCase):
-
-    def test_contribute(self):
-        response = self.client.get('/contribute.json')
-        strings = [
-            'Marketplace',
-            'https://github.com/mozilla/marketplace-env',
-            'https://wiki.mozilla.org/Marketplace',
-            'https://bugzilla.mozilla.org/enter_bug.cgi?product=marketplace&rep_platform=all&op_sys=all',
-            'https://marketplace.firefox.com/'
-        ]
-        self.assertEqual(response.status_code, 200)
-        self.assertTrue(all(string in response.content for string in strings))
 
 
 class TestOpensearch(amo.tests.TestCase):
