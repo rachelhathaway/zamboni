@@ -7,7 +7,7 @@ from django.test.utils import override_settings
 
 import mock
 from lxml import etree
-from nose.tools import eq_, ok_
+from nose.tools import eq_
 from pyquery import PyQuery as pq
 
 import amo
