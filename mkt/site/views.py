@@ -25,7 +25,6 @@ from mkt.carriers import get_carrier
 from mkt.detail.views import manifest as mini_manifest
 from mkt.site import monitors
 from mkt.site.context_processors import get_collect_timings
-from mkt.site.decorators import json_view
 from mkt.site.helpers import media
 
 
@@ -118,14 +117,6 @@ def robots(request):
     """Generate a `robots.txt`."""
     template = render(request, 'site/robots.txt')
     return HttpResponse(template, content_type='text/plain')
-
-
-@json_view
-def contribute(request):
-    """Serve contribute.json"""
-    file = './contribute.json'
-    with open(file) as handle:
-        return json.load(handle)
 
 
 @csrf_exempt

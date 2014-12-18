@@ -17,7 +17,8 @@ services_patterns = patterns('',
 
 urlpatterns = patterns('',
     url('^robots.txt$', views.robots, name='robots.txt'),
-    url(r'^(?P<path>contribute\.json)$', 'django.views.static.serve', {'document_root': settings.ROOT}),
+    url(r'^(?P<path>contribute\.json)$', 'django.views.static.serve',
+        {'document_root': settings.ROOT}),
 
     # Replace opensearch.xml from amo with a specific one for Marketplace.
     url('^opensearch.xml$', views.OpensearchView.as_view(), name='opensearch'),
